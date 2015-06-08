@@ -1,2 +1,13 @@
 <h1>About Dracula</h1>
 <p>This is a paragraph all about Dracula</p>
+
+<button class="btn btn-primary" {{action 'showRealName'}}> Click here to learn Dracula's real name!</button>
+
+{{#if isPictureShowing}}
+<button class='btn btn-primary' {{action 'hidePicture'}}>Hide that scary face away</button>
+<p>
+  <img src="http://www.how-to-draw-funny-cartoons.com/image-files/cartoon-dracula-8.gif" alt="A Photo" />
+</p>
+{{else}}
+  <button class="btn btn-info" {{action 'showPicture'}}> Click Here to see a picture </button>
+{{/if}}

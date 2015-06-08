@@ -7,6 +7,17 @@
       <li>{{#link-to 'phone'}}Phone{{/link-to}}</li>
       <li>{{#link-to 'email'}}Email{{/link-to}}</li>
     </ul>
+
+    {{#if messageSent}}
+      <p>Thank You. Your message has been sent.</p>
+
+    {{else}}
+
+    <p>
+      Or, <a href="#" {{action 'sendMessage'}}>Click here</a> to send a secret message
+    </p>
+    {{/if}}
+    
   </div>
 
   <div class="col-md-6">
